@@ -41,3 +41,12 @@ void LED::disattach()        //引脚回收，恢复到上电状态
     digitalWrite(m_pin,LOW);
     pinMode(m_pin,INPUT);
 }
+GPIO::GPIO(char p)
+  :m_pin(p)
+{   
+   pinMode(p,INPUT_PULLUP);
+}
+char GPIO::GetState()
+{
+  return digitalRead(m_pin);
+}

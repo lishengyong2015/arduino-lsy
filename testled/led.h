@@ -16,5 +16,12 @@ public:
 private:
   byte m_pin;        //控制led使用的引脚
 };
-
+class GPIO
+{
+public:
+  GPIO(char p=0);   //构造函数
+  char GetState();
+private:
+  char m_pin;        //控制的引脚
+};
 #endif
